@@ -9,7 +9,8 @@ public class TileSpawn : MonoBehaviour
     void Start()
     {
         int rand = Random.Range(0, tiles.Length);
-        Instantiate(tiles[rand], transform.position, Quaternion.identity);
+        GameObject childTile = (GameObject)Instantiate(tiles[rand], transform.position, Quaternion.identity);
+        childTile.transform.parent = transform;
     }
 
     // Update is called once per frame
