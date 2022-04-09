@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class characterController : MonoBehaviour
+public class frogMovement : MonoBehaviour
 {
     Rigidbody2D _rigidbody2d;
     float horizontal;
@@ -32,5 +32,7 @@ public class characterController : MonoBehaviour
     private void FixedUpdate()
     {
         transform.position += new Vector3(horizontal, 0, 0) * Time.deltaTime * speed;
+        _animator.SetFloat("moveX", horizontal);
+
     }
 }
