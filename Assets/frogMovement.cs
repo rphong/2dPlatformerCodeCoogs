@@ -8,17 +8,22 @@ public class characterController : MonoBehaviour
     float horizontal;
     float jumpHeight = 5f;
     float speed = 3f;
+
+    Animator _animator;
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody2d = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         horizontal = Input.GetAxis("Horizontal");
-        if(Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody2d.velocity.y) < 0.01f)
+        if (Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody2d.velocity.y) < 0.01f)
+            _animator.SetFloat("moveX", horizontal);
+        if (Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody2d.velocity.y) < 0.01f)
         {
             _rigidbody2d.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
         }
@@ -26,7 +31,6 @@ public class characterController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position += new Vector3(horizontal, 0,  0) *  Time.deltaTime * speed;
-
+        transform.position += new Vector3(horizontal, 0, 0) * Time.deltaTime * speed;
     }
 }
