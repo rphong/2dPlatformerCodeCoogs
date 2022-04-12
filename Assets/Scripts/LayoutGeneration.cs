@@ -13,7 +13,7 @@ public class LayoutGeneration : MonoBehaviour
 
     private float currSpawnTime = 0;
     public float roomSpawnInterval = 0.01f;
-    private bool stopRoomSpawn = false;
+    public bool stopRoomSpawn = false;
 
     public float minX, maxX, minY;
     public LayerMask room;
