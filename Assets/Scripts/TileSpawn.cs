@@ -9,6 +9,7 @@ public class TileSpawn : MonoBehaviour
     void Start()
     {
         int rand = Random.Range(0, tiles.Length);
+        rand = 0;//temporarily sticking to first index, solid block (change later)
         GameObject childTile = (GameObject)Instantiate(tiles[rand], transform.position, Quaternion.identity);
         childTile.transform.parent = transform;
     }

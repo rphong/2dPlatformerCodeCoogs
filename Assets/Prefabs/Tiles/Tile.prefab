@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3850216943721223785}
   - component: {fileID: 8698671909363931107}
   - component: {fileID: 1206068526026744366}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dd9aca867419edf4c8e4fe3ce843d68a, type: 3}
+  m_Sprite: {fileID: -7517053698926566003, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122,3 +122,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53fe8bb63e1d39d48b72cac7b5a69790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBreakable: 0
