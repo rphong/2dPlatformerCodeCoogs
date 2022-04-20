@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &379380400159102964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 379380400159102962}
+  - component: {fileID: 379380400159102965}
+  - component: {fileID: 170925313592941530}
+  m_Layer: 9
+  m_Name: SpawnPointGrass
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &379380400159102962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379380400159102964}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.5, y: -4.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &379380400159102965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379380400159102964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c59538d9ff9b4c34aa25a70af3c80c59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 3392586632487936022, guid: 033285230ff68644aa57dbda835ba368, type: 3}
+  - {fileID: 7639879696045460438, guid: a341d46676d91104b81df607535904cc, type: 3}
+  - {fileID: 2816320979684342642, guid: d8c7377f3096d394cb37944291d251ad, type: 3}
+  - {fileID: 3241797085475488224, guid: 365c3dd9d0218d7489310279e689656d, type: 3}
+  - {fileID: 2572391234414611300, guid: 9653dfe81794a004983245b40af74b62, type: 3}
+  - {fileID: 1669476069383137152, guid: 0d00a9ef5b01a0b4c9da69bd423bb012, type: 3}
+  - {fileID: 2951749540546808269, guid: e3c36f598dcd69b4f860d1bc19b797df, type: 3}
+  - {fileID: 3075685105639472983, guid: 89c8ea2dfa979664d9e8ecf1ccd24d68, type: 3}
+  - {fileID: 4795525786986354100, guid: f75e846e0b660194cb17ce06cb0651a8, type: 3}
+  - {fileID: 2565746593862355393, guid: 1713f4274e6c29549a10f13244e3d38d, type: 3}
+  - {fileID: 1166441776679467281, guid: dad273f43f892214390a480e78c5ffb6, type: 3}
+  - {fileID: 2628518210604937242, guid: eb61ace7e9b1f13458e4af5e05d6a982, type: 3}
+  tileLayer:
+    serializedVersion: 2
+    m_Bits: 512
+--- !u!61 &170925313592941530
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379380400159102964}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

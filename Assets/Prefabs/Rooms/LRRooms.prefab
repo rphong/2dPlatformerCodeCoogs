@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &379380400159102964
+--- !u!1 &2369905274330791038
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 379380400159102962}
-  - component: {fileID: 379380400159102965}
+  - component: {fileID: 8309334952192403813}
+  - component: {fileID: 7014397336724914042}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: LRRooms
   m_TagString: Untagged
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &379380400159102962
+--- !u!4 &8309334952192403813
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379380400159102964}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.5, y: -4.5, z: 1}
+  m_GameObject: {fileID: 2369905274330791038}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.331269, y: -4.3312073, z: -65.638336}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &379380400159102965
+--- !u!114 &7014397336724914042
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379380400159102964}
+  m_GameObject: {fileID: 2369905274330791038}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c59538d9ff9b4c34aa25a70af3c80c59, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a8828f4676dbb74fbc13c9e0b4d73e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiles:
-  - {fileID: 7639879696045460438, guid: a341d46676d91104b81df607535904cc, type: 3}
-  - {fileID: 4727561469321275169, guid: d23c2525fccc513448ffe26165bcec5e, type: 3}
+  rooms:
+  - {fileID: 7273674424559122315, guid: b7bac49fca5f72445b51d8d90421c200, type: 3}

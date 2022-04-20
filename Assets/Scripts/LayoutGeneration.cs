@@ -14,6 +14,8 @@ public class LayoutGeneration : MonoBehaviour
     private float currSpawnTime = 0;
     public float roomSpawnInterval = 0.01f;
     public bool stopRoomSpawn = false;
+    public bool spawnTiles = false;
+    public int roomCount = 0;
 
     public float minX, maxX, minY;
     public LayerMask room;
@@ -41,6 +43,7 @@ public class LayoutGeneration : MonoBehaviour
         if (currSpawnTime >= roomSpawnInterval && stopRoomSpawn == false)
         {
             spawnRoom();
+            roomCount++;
             currSpawnTime = 0;
         }
         else
@@ -48,7 +51,6 @@ public class LayoutGeneration : MonoBehaviour
             currSpawnTime += Time.deltaTime;
         }
     }
-
     private void spawnRoom()
     {
         if (direction == 1 || direction == 2)//Move right
@@ -117,10 +119,14 @@ public class LayoutGeneration : MonoBehaviour
             Instantiate(rooms[2], transform.position, Quaternion.identity);
         }
 
-
+        
         if (transform.position.y <= minY)//If reached bottom
+        {
             stopRoomSpawn = true;
+            spawnTiles = true;
+        }
     }
+
 
     private void goLeftOrDown()
     {

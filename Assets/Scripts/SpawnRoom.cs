@@ -6,7 +6,6 @@ public class SpawnRoom : MonoBehaviour
 {
     public LayerMask whatIsRoom;
     public LayoutGeneration layoutGen;
-
     
     // Update is called once per frame
     void Update()
@@ -15,9 +14,11 @@ public class SpawnRoom : MonoBehaviour
         if (roomDetection == null && layoutGen.stopRoomSpawn == true)
         {
             // Spawn Random Room!
+            layoutGen.roomCount++;
             int rand = Random.Range(0, layoutGen.rooms.Length);
             Instantiate(layoutGen.rooms[rand], transform.position, Quaternion.identity);
             Destroy(gameObject);
+
         }
     }
 }
