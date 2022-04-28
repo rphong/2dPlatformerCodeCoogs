@@ -26,6 +26,11 @@ public class frogMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody2d.velocity.y) < 0.01f)
         {
             _rigidbody2d.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
+
+          
+                FindObjectOfType<AudioManager>().Play("jump");
+            
+            
         }
     }
 
