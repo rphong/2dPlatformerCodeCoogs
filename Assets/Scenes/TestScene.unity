@@ -651,11 +651,19 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 823e9e3fcad4810449b7d1fa8dcb8476, type: 3}
     volume: 0
     pitch: 0
+    loop: 0
     source: {fileID: 0}
   - name: jump
     clip: {fileID: 8300000, guid: 552117a19c746d646992e2f2936e6adc, type: 3}
     volume: 0.483
-    pitch: 1.32
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Theme
+    clip: {fileID: 8300000, guid: d674ee33bd218b647b68297048930477, type: 3}
+    volume: 0.044
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
 --- !u!4 &1785580340
 Transform:
