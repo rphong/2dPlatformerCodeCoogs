@@ -77,8 +77,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomType: 0
+  roomSpawned: 0
+  layoutGenObj: {fileID: 0}
   layoutGen: {fileID: 0}
-  layoutGenObj: {fileID: 2691248980250188242, guid: 68a8d8e5706666143a3216210ec3f261, type: 3}
 --- !u!61 &7408559491251224727
 BoxCollider2D:
   m_ObjectHideFlags: 0

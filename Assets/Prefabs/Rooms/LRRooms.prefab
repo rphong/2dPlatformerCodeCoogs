@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8309334952192403813}
   - component: {fileID: 7014397336724914042}
+  - component: {fileID: -6161945849897155788}
   m_Layer: 0
   m_Name: LRRooms
   m_TagString: Untagged
@@ -45,3 +46,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rooms:
   - {fileID: 7273674424559122315, guid: b7bac49fca5f72445b51d8d90421c200, type: 3}
+  - {fileID: 1608114943209645653, guid: d53f3a38ef2521a40b4f22eadfa01ab7, type: 3}
+--- !u!61 &-6161945849897155788
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2369905274330791038}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

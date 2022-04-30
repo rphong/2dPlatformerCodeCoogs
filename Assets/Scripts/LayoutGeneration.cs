@@ -44,6 +44,7 @@ public class LayoutGeneration : MonoBehaviour
         {
             spawnRoom();
             roomCount++;
+            Debug.Log("Updating " + roomCount);
             currSpawnTime = 0;
         }
         else
