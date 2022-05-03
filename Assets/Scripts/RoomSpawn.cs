@@ -10,7 +10,7 @@ public class RoomSpawn : MonoBehaviour
     void Start()
     {
         int rand = Random.Range(0, rooms.Length);
-        GameObject childTile = (GameObject)Instantiate(rooms[rand], transform.position, Quaternion.identity);
-        childTile.transform.parent = transform;
+        Instantiate(rooms[rand], transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }

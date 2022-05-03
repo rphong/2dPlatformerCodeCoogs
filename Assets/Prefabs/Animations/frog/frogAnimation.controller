@@ -46,7 +46,13 @@ AnimatorController:
   m_Name: frogAnimation
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: moveX
+  - m_Name: directionX
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: velocityY
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -123,7 +129,7 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: moveX
     m_Mirror: 0
-  m_BlendParameter: moveX
+  m_BlendParameter: directionX
   m_BlendParameterY: Blend
   m_MinThreshold: -0.1
   m_MaxThreshold: 0.1

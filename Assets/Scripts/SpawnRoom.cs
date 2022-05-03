@@ -14,12 +14,9 @@ public class SpawnRoom : MonoBehaviour
         if (roomDetection == null && layoutGen.stopRoomSpawn == true)
         {
             // Spawn Random Room!
-            layoutGen.roomCount++;
-            Debug.Log("Updating " + layoutGen.roomCount);
             int rand = Random.Range(0, layoutGen.rooms.Length);
             Instantiate(layoutGen.rooms[rand], transform.position, Quaternion.identity);
             Destroy(gameObject);
-
         }
     }
 }

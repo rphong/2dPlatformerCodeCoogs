@@ -6,6 +6,8 @@ public class LayoutGeneration : MonoBehaviour
 {
     public Transform[] startingPositions;
     public GameObject[] rooms;
+    public GameObject player;
+    public GameObject mainCam;
 
     private int direction;
     private int downCount = 0;
@@ -17,6 +19,9 @@ public class LayoutGeneration : MonoBehaviour
     public bool spawnTiles = false;
     public int roomCount = 0;
 
+    private Vector3 startPos;
+    private bool charSpawned = false;
+
     public float minX, maxX, minY;
     public LayerMask room;
     // Start is called before the first frame update
@@ -25,6 +30,8 @@ public class LayoutGeneration : MonoBehaviour
         int randStartPos = Random.Range(0, startingPositions.Length);
         transform.position = startingPositions[randStartPos].position;
         Instantiate(rooms[3], transform.position, Quaternion.identity);
+        startPos = transform.position;
+        startPos.y += 1;
 
         direction = Random.Range(1, 6);
         if (transform.position.x <= minX)//If started left border, go right or down
@@ -43,13 +50,17 @@ public class LayoutGeneration : MonoBehaviour
         if (currSpawnTime >= roomSpawnInterval && stopRoomSpawn == false)
         {
             spawnRoom();
-            roomCount++;
-            Debug.Log("Updating " + roomCount);
             currSpawnTime = 0;
         }
         else
         {
             currSpawnTime += Time.deltaTime;
+        }
+        if(!charSpawned && roomCount == 16)
+        {
+            Instantiate(player, startPos, Quaternion.identity);
+            Instantiate(mainCam, startPos, Quaternion.identity);
+            charSpawned = true;
         }
     }
     private void spawnRoom()
@@ -58,7 +69,7 @@ public class LayoutGeneration : MonoBehaviour
         {
             if (transform.position.x >= maxX) //If reached right edge, go down
             {
-                direction = 5;
+                goDown();
             }
             else
             {
@@ -81,7 +92,7 @@ public class LayoutGeneration : MonoBehaviour
         {
             if (transform.position.x <= minX) //If reached left edge, go down
             {
-                direction = 5;
+                goDown();
             }
             else
             {
@@ -102,22 +113,7 @@ public class LayoutGeneration : MonoBehaviour
         }
         else if(direction == 5)
         {
-            downCount++;
-            Collider2D roomDetection = Physics2D.OverlapCircle(transform.position, 1, room);
-            if(roomDetection.GetComponent<Room>().roomType != 0 && roomDetection.GetComponent<Room>().roomType != 1)
-            {
-                roomDetection.GetComponent<Room>().deleteRoom();
-
-                if(downCount >= 2)
-                    Instantiate(rooms[0], transform.position, Quaternion.identity);
-                else
-                    Instantiate(rooms[1], transform.position, Quaternion.identity);
-            }
-
-            Vector2 newRoomPos = new Vector2(transform.position.x, transform.position.y - roomDist);
-            transform.position = newRoomPos;
-            direction = Random.Range(1, 6);
-            Instantiate(rooms[2], transform.position, Quaternion.identity);
+            goDown();
         }
 
         
@@ -128,6 +124,25 @@ public class LayoutGeneration : MonoBehaviour
         }
     }
 
+    private void goDown()
+    {
+        downCount++;
+        Collider2D roomDetection = Physics2D.OverlapCircle(transform.position, 1, room);
+        if (roomDetection.GetComponent<Room>().roomType != 0 && roomDetection.GetComponent<Room>().roomType != 1)
+        {
+            roomDetection.GetComponent<Room>().deleteRoom();
+
+            if (downCount >= 2)
+                Instantiate(rooms[0], transform.position, Quaternion.identity);
+            else
+                Instantiate(rooms[1], transform.position, Quaternion.identity);
+        }
+
+        Vector2 newRoomPos = new Vector2(transform.position.x, transform.position.y - roomDist);
+        transform.position = newRoomPos;
+        direction = Random.Range(1, 6);
+        Instantiate(rooms[2], transform.position, Quaternion.identity);
+    }
 
     private void goLeftOrDown()
     {

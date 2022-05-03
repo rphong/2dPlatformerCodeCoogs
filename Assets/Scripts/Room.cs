@@ -13,6 +13,7 @@ public class Room : MonoBehaviour
     {
         layoutGenObj = GameObject.Find("LayoutGenerator");
         layoutGen = layoutGenObj.GetComponent<LayoutGeneration>();
+        layoutGen.roomCount++;
     }
     private void Update()
     {
@@ -22,13 +23,15 @@ public class Room : MonoBehaviour
             foreach (Transform child in transform)
             {
                 TileSpawn tileScript = child.GetComponent<TileSpawn>();
-                tileScript.spawnTile();
+                if(tileScript != null) tileScript.spawnTile();
+
             }
             roomSpawned = true;
         }
     }
     public void deleteRoom()
     {
+        layoutGen.roomCount--;
         Destroy(gameObject);
     }
     
