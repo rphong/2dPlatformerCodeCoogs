@@ -24,6 +24,7 @@ public class LayoutGeneration : MonoBehaviour
 
     public float minX, maxX, minY;
     public LayerMask room;
+    public LayerMask spawnPoints;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +51,9 @@ public class LayoutGeneration : MonoBehaviour
         if (currSpawnTime >= roomSpawnInterval && stopRoomSpawn == false)
         {
             spawnRoom();
+            Collider2D roomSpawnPoint = Physics2D.OverlapCircle(transform.position, 1, spawnPoints);
+            if(roomSpawnPoint != null)
+                roomSpawnPoint.GetComponent<SpawnRoom>().destroySpawnPoint();
             currSpawnTime = 0;
         }
         else
@@ -82,7 +86,7 @@ public class LayoutGeneration : MonoBehaviour
                     Instantiate(rooms[Random.Range(2, 4)], transform.position, Quaternion.identity);
                 }
 
-                Vector2 newRoomPos = new Vector2(transform.position.x + roomDist, transform.position.y);
+                Vector3 newRoomPos = new Vector3(transform.position.x + roomDist, transform.position.y, transform.position.z);
                 transform.position = newRoomPos;
                 goRightOrDown();
                 Instantiate(rooms[Random.Range(2, 4)], transform.position, Quaternion.identity);
@@ -105,7 +109,7 @@ public class LayoutGeneration : MonoBehaviour
                     Instantiate(rooms[Random.Range(2,4)], transform.position, Quaternion.identity);
                 }
 
-                Vector2 newRoomPos = new Vector2(transform.position.x - roomDist, transform.position.y);
+                Vector3 newRoomPos = new Vector3(transform.position.x - roomDist, transform.position.y, transform.position.z);
                 transform.position = newRoomPos;
                 goLeftOrDown();
                 Instantiate(rooms[Random.Range(2, 4)], transform.position, Quaternion.identity);
@@ -138,7 +142,7 @@ public class LayoutGeneration : MonoBehaviour
                 Instantiate(rooms[1], transform.position, Quaternion.identity);
         }
 
-        Vector2 newRoomPos = new Vector2(transform.position.x, transform.position.y - roomDist);
+        Vector3 newRoomPos = new Vector3(transform.position.x, transform.position.y - roomDist, transform.position.z);
         transform.position = newRoomPos;
         direction = Random.Range(1, 6);
         Instantiate(rooms[2], transform.position, Quaternion.identity);

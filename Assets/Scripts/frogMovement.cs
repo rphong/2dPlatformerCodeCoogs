@@ -7,7 +7,7 @@ public class frogMovement : MonoBehaviour
     Rigidbody2D _rigidbody2d;
     private float horizontal;
     private float jumpHeight = 10f;
-    private float speed = 3f;
+    private float speed = 5f;
 
     Animator _animator;
     // Start is called before the first frame update

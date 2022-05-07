@@ -19,4 +19,9 @@ public class SpawnRoom : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void destroySpawnPoint()
+    {
+        Destroy(gameObject);
+    }
 }
