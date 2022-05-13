@@ -46,14 +46,15 @@ public class LayoutGeneration : MonoBehaviour
         }
     }
 
+
     private void Update()
     {
         if (currSpawnTime >= roomSpawnInterval && stopRoomSpawn == false)
         {
-            spawnRoom();
             Collider2D roomSpawnPoint = Physics2D.OverlapCircle(transform.position, 1, spawnPoints);
-            if(roomSpawnPoint != null)
+            if (roomSpawnPoint != null)
                 roomSpawnPoint.GetComponent<SpawnRoom>().destroySpawnPoint();
+            spawnRoom();
             currSpawnTime = 0;
         }
         else
@@ -64,6 +65,8 @@ public class LayoutGeneration : MonoBehaviour
         {
             Instantiate(player, startPos, Quaternion.identity);
             Instantiate(mainCam, startPos, Quaternion.identity);
+            AudioListener tempAudio = GameObject.Find("AudioManager").GetComponent<AudioListener>();
+            Destroy(tempAudio.GetComponent<AudioListener>());
             charSpawned = true;
         }
     }
@@ -123,6 +126,9 @@ public class LayoutGeneration : MonoBehaviour
         
         if (transform.position.y <= minY)//If reached bottom
         {
+            Collider2D roomSpawnPoint = Physics2D.OverlapCircle(transform.position, 1, spawnPoints);
+            if (roomSpawnPoint != null)
+                roomSpawnPoint.GetComponent<SpawnRoom>().destroySpawnPoint();
             stopRoomSpawn = true;
             spawnTiles = true;
         }

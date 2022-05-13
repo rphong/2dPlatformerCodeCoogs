@@ -74,6 +74,9 @@ MonoBehaviour:
   roomSpawned: 0
   layoutGenObj: {fileID: 0}
   layoutGen: {fileID: 0}
+  room:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!61 &4338080235783806124
 BoxCollider2D:
   m_ObjectHideFlags: 0

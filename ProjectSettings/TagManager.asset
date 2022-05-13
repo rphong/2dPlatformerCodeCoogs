@@ -12,10 +12,10 @@ TagManager:
   - Water
   - UI
   - Room
-  - LayerMask
+  - RoomSpawnPoint
   - Tiles
   - BaseSpawnPoint
-  - 
+  - Traps
   - 
   - 
   - 

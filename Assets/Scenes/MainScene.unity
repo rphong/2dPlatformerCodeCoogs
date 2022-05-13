@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 349405772}
   - component: {fileID: 349405773}
+  - component: {fileID: 349405774}
   m_Layer: 7
   m_Name: RoomSpawn (11)
   m_TagString: Untagged
@@ -170,6 +171,32 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   layoutGen: {fileID: 2098833215}
+--- !u!61 &349405774
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349405771}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &532071598
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,6 +349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 551121675}
   - component: {fileID: 551121676}
+  - component: {fileID: 551121677}
   m_Layer: 7
   m_Name: RoomSpawn (2)
   m_TagString: Untagged
@@ -359,6 +387,45 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   layoutGen: {fileID: 2098833215}
+--- !u!61 &551121677
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551121674}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!1 &582429887 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5902931124024292636, guid: 7f81b80b134684b4c9057ef9a6ab6108, type: 3}
+  m_PrefabInstance: {fileID: 1113377953}
+  m_PrefabAsset: {fileID: 0}
+--- !u!81 &582429890
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582429887}
+  m_Enabled: 1
 --- !u!1 &609384091
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,6 +481,7 @@ GameObject:
   m_Component:
   - component: {fileID: 630913361}
   - component: {fileID: 630913362}
+  - component: {fileID: 630913363}
   m_Layer: 7
   m_Name: RoomSpawn (7)
   m_TagString: Untagged
@@ -451,6 +519,32 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   layoutGen: {fileID: 2098833215}
+--- !u!61 &630913363
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630913360}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &780693873
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 780693874}
   - component: {fileID: 780693875}
+  - component: {fileID: 780693876}
   m_Layer: 7
   m_Name: RoomSpawn (12)
   m_TagString: Untagged
@@ -498,6 +593,32 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   layoutGen: {fileID: 2098833215}
+--- !u!61 &780693876
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780693873}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1017539851
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,6 +629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1017539852}
   - component: {fileID: 1017539853}
+  - component: {fileID: 1017539854}
   m_Layer: 7
   m_Name: RoomSpawn (13)
   m_TagString: Untagged
@@ -545,6 +667,32 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   layoutGen: {fileID: 2098833215}
+--- !u!61 &1017539854
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017539851}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1077397536
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,6 +703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1077397537}
   - component: {fileID: 1077397538}
+  - component: {fileID: 1077397539}
   m_Layer: 7
   m_Name: RoomSpawn (4)
   m_TagString: Untagged
@@ -592,6 +741,32 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   layoutGen: {fileID: 2098833215}
+--- !u!61 &1077397539
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077397536}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1102399834
 GameObject:
   m_ObjectHideFlags: 0
@@ -2458,6 +2633,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1140477397}
   - component: {fileID: 1140477398}
+  - component: {fileID: 1140477399}
   m_Layer: 7
   m_Name: RoomSpawn (15)
   m_TagString: Untagged
@@ -2495,6 +2671,32 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   layoutGen: {fileID: 2098833215}
+--- !u!61 &1140477399
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140477396}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1425374539
 GameObject:
   m_ObjectHideFlags: 0
@@ -2505,6 +2707,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1425374540}
   - component: {fileID: 1425374541}
+  - component: {fileID: 1425374542}
   m_Layer: 7
   m_Name: RoomSpawn (6)
   m_TagString: Untagged
@@ -2542,6 +2745,32 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   layoutGen: {fileID: 2098833215}
+--- !u!61 &1425374542
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425374539}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1578904848
 GameObject:
   m_ObjectHideFlags: 0
@@ -2552,6 +2781,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1578904849}
   - component: {fileID: 1578904850}
+  - component: {fileID: 1578904851}
   m_Layer: 7
   m_Name: RoomSpawn
   m_TagString: Untagged
@@ -2589,6 +2819,32 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   layoutGen: {fileID: 2098833215}
+--- !u!61 &1578904851
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578904848}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1686303184
 GameObject:
   m_ObjectHideFlags: 0
@@ -2599,6 +2855,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1686303185}
   - component: {fileID: 1686303186}
+  - component: {fileID: 1686303187}
   m_Layer: 7
   m_Name: RoomSpawn (3)
   m_TagString: Untagged
@@ -2636,6 +2893,32 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   layoutGen: {fileID: 2098833215}
+--- !u!61 &1686303187
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686303184}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1698220842
 GameObject:
   m_ObjectHideFlags: 0
@@ -2646,6 +2929,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1698220843}
   - component: {fileID: 1698220844}
+  - component: {fileID: 1698220845}
   m_Layer: 7
   m_Name: RoomSpawn (8)
   m_TagString: Untagged
@@ -2683,6 +2967,32 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   layoutGen: {fileID: 2098833215}
+--- !u!61 &1698220845
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698220842}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1830053889
 GameObject:
   m_ObjectHideFlags: 0
@@ -2693,6 +3003,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1830053890}
   - component: {fileID: 1830053891}
+  - component: {fileID: 1830053892}
   m_Layer: 7
   m_Name: RoomSpawn (1)
   m_TagString: Untagged
@@ -2730,6 +3041,32 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   layoutGen: {fileID: 2098833215}
+--- !u!61 &1830053892
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830053889}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1851660741
 GameObject:
   m_ObjectHideFlags: 0
@@ -2740,6 +3077,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1851660742}
   - component: {fileID: 1851660743}
+  - component: {fileID: 1851660744}
   m_Layer: 7
   m_Name: RoomSpawn (14)
   m_TagString: Untagged
@@ -2777,6 +3115,32 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   layoutGen: {fileID: 2098833215}
+--- !u!61 &1851660744
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851660741}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1961098701
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,6 +3151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1961098702}
   - component: {fileID: 1961098703}
+  - component: {fileID: 1961098704}
   m_Layer: 7
   m_Name: RoomSpawn (5)
   m_TagString: Untagged
@@ -2824,6 +3189,32 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   layoutGen: {fileID: 2098833215}
+--- !u!61 &1961098704
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961098701}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!114 &2098833215 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1492475986477160860, guid: 68a8d8e5706666143a3216210ec3f261, type: 3}
@@ -2845,6 +3236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2131309807}
   - component: {fileID: 2131309808}
+  - component: {fileID: 2131309809}
   m_Layer: 7
   m_Name: RoomSpawn (10)
   m_TagString: Untagged
@@ -2882,6 +3274,32 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   layoutGen: {fileID: 2098833215}
+--- !u!61 &2131309809
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131309806}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &2139799091
 GameObject:
   m_ObjectHideFlags: 0
@@ -2892,6 +3310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2139799092}
   - component: {fileID: 2139799093}
+  - component: {fileID: 2139799094}
   m_Layer: 7
   m_Name: RoomSpawn (9)
   m_TagString: Untagged
@@ -2929,6 +3348,32 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   layoutGen: {fileID: 2098833215}
+--- !u!61 &2139799094
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139799091}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &1492475988005371555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2944,6 +3389,22 @@ PrefabInstance:
       propertyPath: mainCam
       value: 
       objectReference: {fileID: 3459243915943256854, guid: 69b4f47ff5984164bbf54d57e538b3e2, type: 3}
+    - target: {fileID: 1492475986477160860, guid: 68a8d8e5706666143a3216210ec3f261, type: 3}
+      propertyPath: spawnPoints.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492475986477160860, guid: 68a8d8e5706666143a3216210ec3f261, type: 3}
+      propertyPath: rooms.Array.data[0]
+      value: 
+      objectReference: {fileID: 3262841134116256553, guid: bc3434fe7eae9fc4fb968f8a3f84b2a9, type: 3}
+    - target: {fileID: 1492475986477160860, guid: 68a8d8e5706666143a3216210ec3f261, type: 3}
+      propertyPath: rooms.Array.data[1]
+      value: 
+      objectReference: {fileID: 2705517345764582704, guid: 89d4abbfcf578084892c18f789a4263c, type: 3}
+    - target: {fileID: 1492475986477160860, guid: 68a8d8e5706666143a3216210ec3f261, type: 3}
+      propertyPath: rooms.Array.data[2]
+      value: 
+      objectReference: {fileID: 2369905274330791038, guid: 9e437592e61e31d488bcb02b36b66a15, type: 3}
     - target: {fileID: 1492475986477160860, guid: 68a8d8e5706666143a3216210ec3f261, type: 3}
       propertyPath: rooms.Array.data[3]
       value: 
