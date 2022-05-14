@@ -64,6 +64,7 @@ public class LayoutGeneration : MonoBehaviour
         if(!charSpawned && roomCount == 16)
         {
             Instantiate(player, startPos, Quaternion.identity);
+            player.name = "mainChar";
             Instantiate(mainCam, startPos, Quaternion.identity);
             AudioListener tempAudio = GameObject.Find("AudioManager").GetComponent<AudioListener>();
             Destroy(tempAudio.GetComponent<AudioListener>());
