@@ -30,7 +30,9 @@ public class frogMovement : MonoBehaviour
             //Double jump
             if(jumped)
             {
+                _rigidbody2d.velocity = Vector3.zero;
                 _rigidbody2d.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
+                StartCoroutine(doubleJump());
                 jumped = false;
             }
             //Single jump
@@ -79,5 +81,14 @@ public class frogMovement : MonoBehaviour
         jumpHeight /= 1.5f;
         hurt = true;
         hurtTime = Time.time;
+    }
+
+    private IEnumerator doubleJump()
+    {
+        _animator.SetBool("doubleJump", true);
+        _animator.Play("doubleJump");
+        yield return new WaitForSeconds(0.3f);
+
+        _animator.SetBool("doubleJump", false);
     }
 }
