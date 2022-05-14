@@ -4,27 +4,36 @@ using UnityEngine;
 
 public class frogMovement : MonoBehaviour
 {
+    
+    [SerializeField] //mt
     Rigidbody2D _rigidbody2d;
     private float horizontal;
     private float jumpHeight = 8f;
     private float speed = 5f;
-
+    
     private bool jumped = false;
     private bool hurt = false;
+    bool isMoving = false; //mt
     private float hurtTime;
 
+    AudioSource audioSrc;  //mt
     Animator _animator;
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody2d = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        audioSrc = GetComponent<AudioSource>(); //mt
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(_rigidbody2d.velocity.x);
+        //cheching for movement 
         horizontal = Input.GetAxis("Horizontal");
+        
+        
         if (Input.GetButtonDown("Jump"))
         {
             //Double jump
@@ -68,6 +77,20 @@ public class frogMovement : MonoBehaviour
             jumped = false;
             _animator.SetBool("onGround", true);
         }
+
+        if (localVel.x != 0)
+            isMoving = true;
+
+        else
+            isMoving = false;
+        if (isMoving)
+        {
+            Debug.Log("hi");
+            if (!audioSrc.isPlaying)
+                audioSrc.Play();
+        }
+        else
+            audioSrc.Stop();
     }
 
     private void FixedUpdate()
