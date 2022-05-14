@@ -23,7 +23,11 @@ public class Health : MonoBehaviour
         if (_animator.GetBool("Hurt") == true) return;
 
         currentHealth = Mathf.Clamp(currentHealth - dam, 0, startingHealth);
-        if(currentHealth > 0) //Take damage
+
+        //if hurt, play "Damage" sound effect
+        FindObjectOfType<AudioManager>().Play("Damage");
+
+        if (currentHealth > 0) //Take damage
         {
             Debug.Log("Current health: " + currentHealth);
             StartCoroutine(Invulnerability());
