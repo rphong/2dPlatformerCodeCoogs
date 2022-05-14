@@ -41,6 +41,7 @@ public class frogMovement : MonoBehaviour
             {
                 _rigidbody2d.velocity = Vector3.zero;
                 _rigidbody2d.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
+                FindObjectOfType<AudioManager>().Play("jump");
                 StartCoroutine(doubleJump());
                 jumped = false;
             }
