@@ -5,10 +5,6 @@ using UnityEngine;
 public class frogMovement : MonoBehaviour
 {
     
-<<<<<<< Updated upstream
-=======
-    
->>>>>>> Stashed changes
     Rigidbody2D _rigidbody2d;
     private float horizontal;
     private float jumpHeight = 8f;
@@ -18,27 +14,22 @@ public class frogMovement : MonoBehaviour
     private bool doubleJumped = false;
     private bool falling = false;
     private bool hurt = false;
- 
+    bool isMoving = false; //mt
     private float hurtTime;
 
-
-
+    AudioSource audioSrc;  //mt
     Animator _animator;
     // Start is called before the first frame update
     void Awake()
     {
         _rigidbody2d = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
-  
+        audioSrc = GetComponent<AudioSource>(); //mt
     }
 
     // Update is called once per frame
     void Update()
     {
-<<<<<<< Updated upstream
-=======
-        
->>>>>>> Stashed changes
         //cheching for movement 
         horizontal = Input.GetAxis("Horizontal");
         
@@ -50,7 +41,7 @@ public class frogMovement : MonoBehaviour
             {
                 _rigidbody2d.velocity = Vector3.zero;
                 _rigidbody2d.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
-                FindObjectOfType<AudioManager>().Play("DoubleJump");
+                FindObjectOfType<AudioManager>().Play("jump");
                 StartCoroutine(doubleJump());
                 jumped = false;
                 doubleJumped = true;
@@ -91,7 +82,19 @@ public class frogMovement : MonoBehaviour
         }
         falling = (localVel.y < 0 ? true : false);
 
+        if (localVel.x != 0)
+            isMoving = true;
 
+        else
+            isMoving = false;
+        if (isMoving)
+        {
+            Debug.Log("hi");
+            if (!audioSrc.isPlaying)
+                audioSrc.Play();
+        }
+        else
+            audioSrc.Stop();
     }
 
     private void FixedUpdate()
