@@ -25,6 +25,13 @@ public class Room : MonoBehaviour
                 TileSpawn tileScript = child.GetComponent<TileSpawn>();
                 if(tileScript != null) tileScript.spawnTile();
 
+                TrapSpawner trapScript = child.GetComponent<TrapSpawner>();
+                if (trapScript != null)
+                {
+                    if (trapScript.difficulty <= layoutGen.currentDifficulty)
+                        trapScript.spawnTrap();
+                }
+
             }
             roomSpawned = true;
         }

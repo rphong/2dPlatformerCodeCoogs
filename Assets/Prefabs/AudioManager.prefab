@@ -64,6 +64,24 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: Damage
+    clip: {fileID: 8300000, guid: 9a3689e97ab99f44284f86e1457b2a5c, type: 3}
+    volume: 0.271
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Death
+    clip: {fileID: 8300000, guid: d48ade3ef198c7b449b385b6ef85852a, type: 3}
+    volume: 0.044
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Movement
+    clip: {fileID: 8300000, guid: 186bc670efb1fce458418546f032be3e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
 --- !u!81 &582429890
 AudioListener:
   m_ObjectHideFlags: 0

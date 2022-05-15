@@ -22,12 +22,16 @@ public class LayoutGeneration : MonoBehaviour
     private Vector3 startPos;
     private bool charSpawned = false;
 
+    public int currentDifficulty;
+
     public float minX, maxX, minY;
     public LayerMask room;
     public LayerMask spawnPoints;
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(GameStats.gameDifficulty);
+        currentDifficulty = GameStats.gameDifficulty;
         int randStartPos = Random.Range(0, startingPositions.Length);
         transform.position = startingPositions[randStartPos].position;
         Instantiate(rooms[3], transform.position, Quaternion.identity);
@@ -171,5 +175,10 @@ public class LayoutGeneration : MonoBehaviour
         {
             direction = Random.Range(1, 6);
         }
+    }
+
+    private IEnumerator openingPortalAnim()
+    {
+
     }
 }

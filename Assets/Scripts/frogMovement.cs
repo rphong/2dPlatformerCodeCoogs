@@ -12,6 +12,8 @@ public class frogMovement : MonoBehaviour
     private float speed = 5f;
     
     private bool jumped = false;
+    private bool doubleJumped = false;
+    private bool falling = false;
     private bool hurt = false;
     bool isMoving = false; //mt
     private float hurtTime;
@@ -29,7 +31,6 @@ public class frogMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(_rigidbody2d.velocity.x);
         //cheching for movement 
         horizontal = Input.GetAxis("Horizontal");
         
@@ -37,13 +38,14 @@ public class frogMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             //Double jump
-            if(jumped)
+            if(jumped || (falling && !doubleJumped))
             {
                 _rigidbody2d.velocity = Vector3.zero;
                 _rigidbody2d.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
                 FindObjectOfType<AudioManager>().Play("jump");
                 StartCoroutine(doubleJump());
                 jumped = false;
+                doubleJumped = true;
             }
             //Single jump
             if (Mathf.Abs(_rigidbody2d.velocity.y) < 0.01f)
@@ -76,8 +78,10 @@ public class frogMovement : MonoBehaviour
         if (Mathf.Abs(localVel.y) < .1f)
         {
             jumped = false;
+            doubleJumped = false;
             _animator.SetBool("onGround", true);
         }
+        falling = (localVel.y < 0 ? true : false);
 
         if (localVel.x != 0)
             isMoving = true;
@@ -99,7 +103,7 @@ public class frogMovement : MonoBehaviour
         transform.position += new Vector3(horizontal, 0, 0) * Time.deltaTime * speed;
     }
 
-    public void stopMovement()
+    public void slowMovement()
     {
         speed /= 2;
         jumpHeight /= 1.5f;
