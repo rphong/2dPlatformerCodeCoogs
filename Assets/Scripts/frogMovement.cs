@@ -14,17 +14,17 @@ public class frogMovement : MonoBehaviour
     private bool doubleJumped = false;
     private bool falling = false;
     private bool hurt = false;
-    bool isMoving = false; //mt
+
     private float hurtTime;
 
-    AudioSource audioSrc;  //mt
+
     Animator _animator;
     // Start is called before the first frame update
     void Awake()
     {
         _rigidbody2d = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
-        audioSrc = GetComponent<AudioSource>(); //mt
+
     }
 
     // Update is called once per frame
@@ -82,19 +82,7 @@ public class frogMovement : MonoBehaviour
         }
         falling = (localVel.y < 0 ? true : false);
 
-        if (localVel.x != 0)
-            isMoving = true;
 
-        else
-            isMoving = false;
-        if (isMoving)
-        {
-            Debug.Log("hi");
-            if (!audioSrc.isPlaying)
-                audioSrc.Play();
-        }
-        else
-            audioSrc.Stop();
     }
 
     private void FixedUpdate()

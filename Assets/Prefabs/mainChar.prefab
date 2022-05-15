@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6953858316152727918}
   - component: {fileID: 507862619}
   - component: {fileID: 1205403907434645347}
-  - component: {fileID: 1067844391}
+  - component: {fileID: 1111522657}
   m_Layer: 3
   m_Name: mainChar
   m_TagString: Player
@@ -149,7 +149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d023e54c5d503d847ab8c6f6ae3c3234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rigidbody2d: {fileID: 0}
 --- !u!95 &507862619
 Animator:
   serializedVersion: 4
@@ -183,99 +182,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 1000
---- !u!82 &1067844391
-AudioSource:
+--- !u!114 &1111522657
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3469956659535951653}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 186bc670efb1fce458418546f032be3e, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.778
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9ca81e1ce2613a479c66ae4119aedee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FrogFootStep1: {fileID: 8300000, guid: 5e2c90842375fa0488cae4d73ef5fdde, type: 3}
+  FrogFootStep2: {fileID: 8300000, guid: 2b78187e230a7d6479ea50ca452ae945, type: 3}
+  FrogFootStep3: {fileID: 8300000, guid: 2b0ed187982c71241b3ebb268536b298, type: 3}
+  FrogFootStep4: {fileID: 8300000, guid: 760e5b8a78947b04e820cdfdbfed8302, type: 3}
+  FrogFootStepArray:
+  - {fileID: 8300000, guid: 5e2c90842375fa0488cae4d73ef5fdde, type: 3}
+  - {fileID: 8300000, guid: 2b78187e230a7d6479ea50ca452ae945, type: 3}
+  - {fileID: 8300000, guid: 2b0ed187982c71241b3ebb268536b298, type: 3}
+  - {fileID: 8300000, guid: 760e5b8a78947b04e820cdfdbfed8302, type: 3}
