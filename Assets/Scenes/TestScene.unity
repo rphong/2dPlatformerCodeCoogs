@@ -123,17 +123,27 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &424976195 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5195127200047832781, guid: 1db2145a03a70b84ba9685a12f577d53, type: 3}
   m_PrefabInstance: {fileID: 7758497652540630774}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &424976200
+=======
+--- !u!1 &785036736 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3469956659535951653, guid: 2db4ab9f2119c1c469b7abff67507486, type: 3}
+  m_PrefabInstance: {fileID: 1111522655}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &785036745
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 424976195}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -152,6 +162,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 265b5d662627ad84a92ddb26477a23c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+  m_GameObject: {fileID: 785036736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdbb4dba058fc7241aa39147e16b69a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Footstep1: {fileID: 8300000, guid: 5e2c90842375fa0488cae4d73ef5fdde, type: 3}
+  Footstep2: {fileID: 8300000, guid: 2b78187e230a7d6479ea50ca452ae945, type: 3}
+  Footstep3: {fileID: 8300000, guid: 2b0ed187982c71241b3ebb268536b298, type: 3}
+  Footstep4: {fileID: 8300000, guid: 760e5b8a78947b04e820cdfdbfed8302, type: 3}
+  FootstepArray:
+  - {fileID: 8300000, guid: 5e2c90842375fa0488cae4d73ef5fdde, type: 3}
+  - {fileID: 8300000, guid: 2b78187e230a7d6479ea50ca452ae945, type: 3}
+  - {fileID: 8300000, guid: 2b0ed187982c71241b3ebb268536b298, type: 3}
+  - {fileID: 8300000, guid: 760e5b8a78947b04e820cdfdbfed8302, type: 3}
+>>>>>>> Stashed changes
 --- !u!1001 &1111522655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -169,11 +196,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6001633024757593992, guid: 2db4ab9f2119c1c469b7abff67507486, type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< Updated upstream
       value: -2.79
       objectReference: {fileID: 0}
     - target: {fileID: 6001633024757593992, guid: 2db4ab9f2119c1c469b7abff67507486, type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.53
+=======
+      value: -4.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6001633024757593992, guid: 2db4ab9f2119c1c469b7abff67507486, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.37
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 6001633024757593992, guid: 2db4ab9f2119c1c469b7abff67507486, type: 3}
       propertyPath: m_LocalPosition.z
@@ -821,6 +856,7 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 6617552855606452140, guid: 0a4b74ee4c2592d469fa3104697f0ff5, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -832,6 +868,23 @@ PrefabInstance:
     - target: {fileID: 6617552855606452140, guid: 0a4b74ee4c2592d469fa3104697f0ff5, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
+=======
+    - target: {fileID: 5902931124024292637, guid: 7f81b80b134684b4c9057ef9a6ab6108, type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: Death
+      objectReference: {fileID: 0}
+    - target: {fileID: 5902931124024292637, guid: 7f81b80b134684b4c9057ef9a6ab6108, type: 3}
+      propertyPath: sounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1f40152d42bbac1468ed9ade8fb87306, type: 3}
+    - target: {fileID: 5902931124024292637, guid: 7f81b80b134684b4c9057ef9a6ab6108, type: 3}
+      propertyPath: sounds.Array.data[5].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5902931124024292637, guid: 7f81b80b134684b4c9057ef9a6ab6108, type: 3}
+      propertyPath: sounds.Array.data[5].name
+      value: DoubleJump
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 6617552855606452140, guid: 0a4b74ee4c2592d469fa3104697f0ff5, type: 3}
       propertyPath: m_LocalRotation.z
@@ -894,6 +947,7 @@ PrefabInstance:
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 5195127200047832782, guid: 1db2145a03a70b84ba9685a12f577d53, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
@@ -909,6 +963,11 @@ PrefabInstance:
     - target: {fileID: 5195127200047832782, guid: 1db2145a03a70b84ba9685a12f577d53, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+=======
+    - target: {fileID: 5902931124024292637, guid: 7f81b80b134684b4c9057ef9a6ab6108, type: 3}
+      propertyPath: sounds.Array.data[5].volume
+      value: 0.044
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1db2145a03a70b84ba9685a12f577d53, type: 3}
