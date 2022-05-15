@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5195127200047832783}
   - component: {fileID: 5195127200047832780}
   - component: {fileID: 4701412933632762690}
+  - component: {fileID: 6586095419210806806}
+  - component: {fileID: 9133975372897495985}
   m_Layer: 0
   m_Name: ExitPortal
   m_TagString: Untagged
@@ -122,3 +124,27 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0076119187, y: -0.05608158}
   m_Size: {x: 0.24093561, y: 0.6794354}
   m_Direction: 0
+--- !u!114 &6586095419210806806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5195127200047832781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 265b5d662627ad84a92ddb26477a23c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9133975372897495985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5195127200047832781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 302665c6f76ee2c4ea0ba48b33f27ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

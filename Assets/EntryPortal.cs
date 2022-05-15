@@ -8,9 +8,11 @@ public class EntryPortal : MonoBehaviour
     private void Awake()
     {
         portalAnimator = GetComponent<Animator>();
-        portalAnimator.Play("EntryPortalOpen");
-        StartCoroutine(closeAndDissapear());
+    }
 
+    public void closePortal()
+    {
+        StartCoroutine(closeAndDissapear());
     }
 
     private IEnumerator closeAndDissapear()
@@ -18,6 +20,5 @@ public class EntryPortal : MonoBehaviour
         portalAnimator.Play("EntryPortalClose");
         yield return new WaitForSeconds(1f);
         gameObject.SetActive(false);
-
     }
 }

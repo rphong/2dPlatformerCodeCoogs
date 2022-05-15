@@ -6,8 +6,13 @@ public class LayoutGeneration : MonoBehaviour
 {
     public Transform[] startingPositions;
     public GameObject[] rooms;
-    public GameObject player;
     public GameObject mainCam;
+
+    public GameObject player;
+    public frogMovement playerScript;
+    public GameObject entryPortal;
+    public EntryPortal entryPortalScript;
+    public GameObject exitPortal;
 
     private int direction;
     private int downCount = 0;
@@ -30,11 +35,11 @@ public class LayoutGeneration : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(GameStats.gameDifficulty);
         currentDifficulty = GameStats.gameDifficulty;
+
         int randStartPos = Random.Range(0, startingPositions.Length);
         transform.position = startingPositions[randStartPos].position;
-        Instantiate(rooms[3], transform.position, Quaternion.identity);
+        Instantiate(rooms[4], transform.position, Quaternion.identity);
         startPos = transform.position;
         startPos.y += 1;
 
@@ -67,11 +72,12 @@ public class LayoutGeneration : MonoBehaviour
         }
         if(!charSpawned && roomCount == 16)
         {
-            Instantiate(player, startPos, Quaternion.identity);
-            player.name = "mainChar";
-            Instantiate(mainCam, startPos, Quaternion.identity);
+            var startPosCam = startPos;
+            startPosCam.z = -10;
+            Instantiate(mainCam, startPosCam, Quaternion.identity);
+            StartCoroutine(openingPortalAnim());
             AudioListener tempAudio = GameObject.Find("AudioManager").GetComponent<AudioListener>();
-            Destroy(tempAudio.GetComponent<AudioListener>());
+            if(tempAudio != null) Destroy(tempAudio.GetComponent<AudioListener>());
             charSpawned = true;
         }
     }
@@ -131,6 +137,7 @@ public class LayoutGeneration : MonoBehaviour
         
         if (transform.position.y <= minY)//If reached bottom
         {
+            Instantiate(exitPortal, transform.position, Quaternion.identity);
             Collider2D roomSpawnPoint = Physics2D.OverlapCircle(transform.position, 1, spawnPoints);
             if (roomSpawnPoint != null)
                 roomSpawnPoint.GetComponent<SpawnRoom>().destroySpawnPoint();
@@ -179,6 +186,17 @@ public class LayoutGeneration : MonoBehaviour
 
     private IEnumerator openingPortalAnim()
     {
+        Instantiate(entryPortal, startPos, Quaternion.identity);
 
+        yield return new WaitForSeconds(1f);
+        Instantiate(player, startPos, Quaternion.identity);
+
+        entryPortalScript = GameObject.Find("EntryPortal(Clone)").GetComponent<EntryPortal>();
+        playerScript = GameObject.Find("mainChar(Clone)").GetComponent<frogMovement>();
+
+        playerScript.applyForceX(-1f);
+
+        yield return new WaitForSeconds(2f);
+        entryPortalScript.closePortal();
     }
 }

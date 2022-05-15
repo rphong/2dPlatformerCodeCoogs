@@ -7,15 +7,17 @@ public class mainCam : MonoBehaviour
     public GameObject player;
     public Vector3 offset;
 
-    private void Start()
+    public void setCamToPlayer()
     {
         player = GameObject.Find("mainChar(Clone)");
     }
 
     void Update()
     {
-        if(player != null)
+        if (player != null)
             transform.position = new Vector3(player.transform.position.x + offset.x, player.transform.position.y + offset.y, offset.z); // Camera follows the player with specified offset position
+        else
+            setCamToPlayer();
     }
 
 }

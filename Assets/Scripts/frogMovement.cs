@@ -5,7 +5,6 @@ using UnityEngine;
 public class frogMovement : MonoBehaviour
 {
     
-    [SerializeField] //mt
     Rigidbody2D _rigidbody2d;
     private float horizontal;
     private float jumpHeight = 8f;
@@ -21,7 +20,7 @@ public class frogMovement : MonoBehaviour
     AudioSource audioSrc;  //mt
     Animator _animator;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         _rigidbody2d = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
@@ -109,6 +108,11 @@ public class frogMovement : MonoBehaviour
         jumpHeight /= 1.5f;
         hurt = true;
         hurtTime = Time.time;
+    }
+
+    public void applyForceX(float force)
+    {
+        _rigidbody2d.AddForce(new Vector2(force, 0), ForceMode2D.Impulse);
     }
 
     private IEnumerator doubleJump()

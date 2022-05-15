@@ -2782,6 +2782,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1081011251531743197, guid: 5d6ed89dfe9e57347bfefb2f2febbbb2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5893578791776109413, guid: 5d6ed89dfe9e57347bfefb2f2febbbb2, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3446,6 +3450,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1492475986477160860, guid: 68a8d8e5706666143a3216210ec3f261, type: 3}
+      propertyPath: exitPortal
+      value: 
+      objectReference: {fileID: 5195127200047832781, guid: 1db2145a03a70b84ba9685a12f577d53, type: 3}
+    - target: {fileID: 1492475986477160860, guid: 68a8d8e5706666143a3216210ec3f261, type: 3}
+      propertyPath: entryPortal
+      value: 
+      objectReference: {fileID: 6617552855606452143, guid: 0a4b74ee4c2592d469fa3104697f0ff5, type: 3}
     - target: {fileID: 1492475986477160860, guid: 68a8d8e5706666143a3216210ec3f261, type: 3}
       propertyPath: startingPositions.Array.data[0]
       value: 
