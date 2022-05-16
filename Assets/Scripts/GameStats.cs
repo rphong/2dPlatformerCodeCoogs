@@ -6,7 +6,6 @@ public static class GameStats
 {
     //End game stats
     public static int totalPoints { get; set; }
-    public static int levelReached { get; set; }
     public static int timeLived { get; set; }
     public static int timePerLevel { get; set; }
 

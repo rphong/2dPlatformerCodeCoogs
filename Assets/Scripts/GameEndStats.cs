@@ -23,7 +23,7 @@ public class GameEndStats : MonoBehaviour
 
         yield return StartCoroutine(CountText(GameStats.totalPoints, totalPointTxt));
         yield return new WaitForSeconds(0.5f);
-        yield return StartCoroutine(CountText(GameStats.levelReached, levelReachedTxt));
+        yield return StartCoroutine(CountText(GameStats.gameDifficulty, levelReachedTxt));
         yield return new WaitForSeconds(0.5f);
         yield return StartCoroutine(CountText(GameStats.timeLived, timeLivedTxt));
         yield return new WaitForSeconds(0.5f);

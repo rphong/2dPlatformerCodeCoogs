@@ -42,7 +42,7 @@ public class Health : MonoBehaviour
             frogChar.SetActive(false);
             GameStats.gameEndTime = (int)Mathf.Ceil(Time.time);
             GameStats.timeLived = GameStats.gameEndTime - GameStats.gameStartTime;
-            GameStats.timePerLevel = GameStats.timeLived / GameStats.levelReached;
+            GameStats.timePerLevel = GameStats.timeLived / GameStats.gameDifficulty;
             Instantiate(deathScreen);
             Debug.Log("Dead");
         }
