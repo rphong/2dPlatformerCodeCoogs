@@ -33,7 +33,6 @@ public class Health : MonoBehaviour
 
         if (currentHealth > 0) //Take damage
         {
-            Debug.Log("Current health: " + currentHealth);
             StartCoroutine(Invulnerability());
         }
         else //Die
@@ -45,7 +44,6 @@ public class Health : MonoBehaviour
             GameStats.timePerLevel = GameStats.timeLived / GameStats.gameDifficulty;
             Instantiate(deathScreen);
             FindObjectOfType<AudioManager>().Play("Death");
-            Debug.Log("Dead");
         }
     }
     private IEnumerator Invulnerability()

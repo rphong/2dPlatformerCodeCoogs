@@ -17,7 +17,7 @@ public class ExitPortal : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            GameStats.gameDifficulty++;
+            
             StartCoroutine(closeAndDissapear());
         }
     }

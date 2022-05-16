@@ -10,5 +10,12 @@ public class changeScene : MonoBehaviour
         FindObjectOfType<AudioManager>().StopPlaying("Theme");
 
         SceneManager.LoadScene(name);
+
+        if (name == "MainLevel")
+        {
+            Debug.Log("diff inc");
+            GameStats.gameDifficulty++;
+            GameStats.totalPoints += 100 + 50 * GameStats.gameDifficulty;
+        }
     }
 }

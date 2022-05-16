@@ -85,6 +85,11 @@ public class LayoutGeneration : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Theme");
             charSpawned = true;
         }
+
+        if(Input.GetKeyDown("r"))
+        {
+            player.transform.position = startPos;
+        }
     }
     private void spawnRoom()
     {
@@ -198,7 +203,8 @@ public class LayoutGeneration : MonoBehaviour
         Instantiate(player, startPos, Quaternion.identity);
 
         entryPortalScript = GameObject.Find("EntryPortal(Clone)").GetComponent<EntryPortal>();
-        playerScript = GameObject.Find("mainChar(Clone)").GetComponent<frogMovement>();
+        player = GameObject.Find("mainChar(Clone)");
+        playerScript = player.GetComponent<frogMovement>();
 
         playerScript.applyForceX(-1f);
         healthUI.SetActive(true);
@@ -207,4 +213,5 @@ public class LayoutGeneration : MonoBehaviour
         yield return new WaitForSeconds(2f);
         entryPortalScript.closePortal();
     }
+
 }
