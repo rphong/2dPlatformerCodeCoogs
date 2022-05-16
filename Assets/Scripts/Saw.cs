@@ -21,7 +21,7 @@ public class Saw : MonoBehaviour
         }
         transform.position = Vector2.MoveTowards(transform.position, waypoints[currentWaypointIndex].transform.position, Time.deltaTime * speed);
         Vector3 currPos = transform.position;
-        currPos.z = 10;
+        currPos.z = 2;
         transform.position = currPos;
     }
 }

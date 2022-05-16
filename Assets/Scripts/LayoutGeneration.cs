@@ -7,6 +7,7 @@ public class LayoutGeneration : MonoBehaviour
     public Transform[] startingPositions;
     public GameObject[] rooms;
     public GameObject mainCam;
+    public GameObject healthUI;
 
     public GameObject player;
     public frogMovement playerScript;
@@ -36,6 +37,7 @@ public class LayoutGeneration : MonoBehaviour
     void Start()
     {
         currentDifficulty = GameStats.gameDifficulty;
+        Physics2D.IgnoreLayerCollision(3, 10, false);
 
         int randStartPos = Random.Range(0, startingPositions.Length);
         transform.position = startingPositions[randStartPos].position;
@@ -76,8 +78,11 @@ public class LayoutGeneration : MonoBehaviour
             startPosCam.z = -10;
             Instantiate(mainCam, startPosCam, Quaternion.identity);
             StartCoroutine(openingPortalAnim());
+
             AudioListener tempAudio = GameObject.Find("AudioManager").GetComponent<AudioListener>();
             if(tempAudio != null) Destroy(tempAudio.GetComponent<AudioListener>());
+
+            FindObjectOfType<AudioManager>().Play("Theme");
             charSpawned = true;
         }
     }
@@ -186,6 +191,7 @@ public class LayoutGeneration : MonoBehaviour
 
     private IEnumerator openingPortalAnim()
     {
+        yield return new WaitForSeconds(1f);
         Instantiate(entryPortal, startPos, Quaternion.identity);
 
         yield return new WaitForSeconds(1f);
@@ -195,6 +201,8 @@ public class LayoutGeneration : MonoBehaviour
         playerScript = GameObject.Find("mainChar(Clone)").GetComponent<frogMovement>();
 
         playerScript.applyForceX(-1f);
+        healthUI.SetActive(true);
+
 
         yield return new WaitForSeconds(2f);
         entryPortalScript.closePortal();

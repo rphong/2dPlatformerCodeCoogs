@@ -54,25 +54,25 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: jump
     clip: {fileID: 8300000, guid: 552117a19c746d646992e2f2936e6adc, type: 3}
-    volume: 0.483
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Theme
     clip: {fileID: 8300000, guid: d674ee33bd218b647b68297048930477, type: 3}
-    volume: 0.044
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Damage
     clip: {fileID: 8300000, guid: 9a3689e97ab99f44284f86e1457b2a5c, type: 3}
-    volume: 0.271
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Death
     clip: {fileID: 8300000, guid: d48ade3ef198c7b449b385b6ef85852a, type: 3}
-    volume: 0.044
+    volume: 0.05
     pitch: 1
     loop: 1
     source: {fileID: 0}

@@ -41,8 +41,8 @@ public class LevelManager : MonoBehaviour
             await Task.Delay(300);
             target = Mathf.Max(layoutGen.roomCount/16, .1f);
         } while (layoutGen.roomCount < 16);
-
         await Task.Delay(1000);
+
         loaderCanvas.SetActive(false);
     }
 

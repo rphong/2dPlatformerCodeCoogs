@@ -31,10 +31,6 @@ public class AudioManager : MonoBehaviour
               
         }
     }
-    void Start()
-    {
-        Play("Theme");
-    }
     public void Play(string name)
     {
         Sound s = Array.Find(sounds, sounds => sounds.name==name);
@@ -47,7 +43,7 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
-    /*public void StopPlaying(string name)
+    public void StopPlaying(string name)
     {
         Sound s = Array.Find(sounds, sounds => sounds.name == name);
         if (s == null)
@@ -56,10 +52,6 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        s.source.volume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
-        s.source.pitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
-
         s.source.Stop();
     }
-    */
 }

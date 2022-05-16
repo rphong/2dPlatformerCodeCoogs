@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private int startingHealth;
+    public int startingHealth;
     private Animator _animator;
+    private GameObject frogChar;
+    [SerializeField] private GameObject deathScreen;
+
 
     public float currentHealth { get; private set; }
 
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = startingHealth;   
+        startingHealth = GameStats.maxGameHealth;
+        currentHealth = GameStats.currentGameHealth;   
         _animator = GetComponent<Animator>();
-
     }
 
     public void takeDamage(int dam)
@@ -23,6 +26,7 @@ public class Health : MonoBehaviour
         if (_animator.GetBool("Hurt") == true) return;
 
         currentHealth = Mathf.Clamp(currentHealth - dam, 0, startingHealth);
+        GameStats.currentGameHealth--;
 
         //if hurt, play "Damage" sound effect
         FindObjectOfType<AudioManager>().Play("Damage");
@@ -34,6 +38,12 @@ public class Health : MonoBehaviour
         }
         else //Die
         {
+            frogChar = GameObject.Find("mainChar(Clone)");
+            frogChar.SetActive(false);
+            GameStats.gameEndTime = (int)Mathf.Ceil(Time.time);
+            GameStats.timeLived = GameStats.gameEndTime - GameStats.gameStartTime;
+            GameStats.timePerLevel = GameStats.timeLived / GameStats.levelReached;
+            Instantiate(deathScreen);
             Debug.Log("Dead");
         }
     }

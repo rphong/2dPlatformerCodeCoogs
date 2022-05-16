@@ -181,7 +181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ee0f6cb1094f74d8afa20a19963720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 1000
+  startingHealth: 3
+  deathScreen: {fileID: 1930433804092796185, guid: a305e95fb7b37774d97ebc3b3ca170ca, type: 3}
 --- !u!114 &1111522657
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,6 +7,8 @@ public class changeScene : MonoBehaviour
 {
     public void switchScene(string name)
     {
+        FindObjectOfType<AudioManager>().StopPlaying("Theme");
+
         SceneManager.LoadScene(name);
     }
 }
