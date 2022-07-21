@@ -669,7 +669,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GAME NAME
+  m_text: Froggie Adventures
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5334e4e7080aa61459b63d7795cb14ef, type: 2}
   m_sharedMaterial: {fileID: -2125552641596127058, guid: 5334e4e7080aa61459b63d7795cb14ef, type: 2}

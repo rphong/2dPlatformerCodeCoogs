@@ -7,7 +7,7 @@ public class GameMenu : MonoBehaviour
     private void Awake()
     {
         GameStats.gameDifficulty = 0;
-        GameStats.maxGameHealth = 3;
+        GameStats.maxGameHealth = 10;
         GameStats.totalPoints = -150;
         GameStats.timeLived = 1000;
         GameStats.timePerLevel = 100;
