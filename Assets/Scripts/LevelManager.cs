@@ -30,7 +30,6 @@ public class LevelManager : MonoBehaviour
         layoutGen = layoutGenObj.GetComponent<LayoutGeneration>();
         loadScene();
     }
-
     
     public async void loadScene()
     {

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class frogMovement : MonoBehaviour
 {
-    
+    Animator _animator;
     Rigidbody2D _rigidbody2d;
+    
     private float horizontal;
     private float jumpHeight = 8f;
     private float speed = 5f;
@@ -17,8 +18,6 @@ public class frogMovement : MonoBehaviour
 
     private float hurtTime;
 
-
-    Animator _animator;
     // Start is called before the first frame update
     void Awake()
     {
@@ -30,7 +29,7 @@ public class frogMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //cheching for movement 
+        //Checking for movement 
         horizontal = Input.GetAxis("Horizontal");
         
         
@@ -81,8 +80,6 @@ public class frogMovement : MonoBehaviour
             _animator.SetBool("onGround", true);
         }
         falling = (localVel.y < 0 ? true : false);
-
-
     }
 
     private void FixedUpdate()
@@ -90,6 +87,7 @@ public class frogMovement : MonoBehaviour
         transform.position += new Vector3(horizontal, 0, 0) * Time.deltaTime * speed;
     }
 
+    //Slow player after being hit
     public void slowMovement()
     {
         speed /= 2;
@@ -98,11 +96,13 @@ public class frogMovement : MonoBehaviour
         hurtTime = Time.time;
     }
 
+    //Apply horizontal force to player
     public void applyForceX(float force)
     {
         _rigidbody2d.AddForce(new Vector2(force, 0), ForceMode2D.Impulse);
     }
 
+    //Double jump animaton
     private IEnumerator doubleJump()
     {
         _animator.SetBool("doubleJump", true);

@@ -12,7 +12,6 @@ public class Health : MonoBehaviour
 
     public float currentHealth { get; private set; }
 
-    // Start is called before the first frame update
     void Start()
     {
         startingHealth = GameStats.maxGameHealth;
@@ -39,6 +38,8 @@ public class Health : MonoBehaviour
         {
             frogChar = GameObject.Find("mainChar(Clone)");
             frogChar.SetActive(false);
+
+            //Calculate death stats
             GameStats.gameEndTime = (int)Mathf.Ceil(Time.time);
             GameStats.timeLived = GameStats.gameEndTime - GameStats.gameStartTime;
             GameStats.timePerLevel = GameStats.timeLived / GameStats.gameDifficulty;

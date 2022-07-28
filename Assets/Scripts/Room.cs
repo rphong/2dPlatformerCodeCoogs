@@ -19,7 +19,7 @@ public class Room : MonoBehaviour
     {
         if (layoutGen.spawnTiles == true && roomSpawned == false && layoutGen.roomCount == 16)
         {
-            
+            //When rooms are finished spawning, spawn tiles and traps
             foreach (Transform child in transform)
             {
                 TileSpawn tileScript = child.GetComponent<TileSpawn>();

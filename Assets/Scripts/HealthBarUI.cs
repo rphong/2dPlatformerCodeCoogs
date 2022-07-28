@@ -9,10 +9,9 @@ public class HealthBarUI : MonoBehaviour
     public Image totalHealth;
     public Image currentHealth;
 
-    // Start is called before the first frame update
     private void Start()
     {
-        Debug.Log((float)GameStats.maxGameHealth);
+        //Set initial health
         totalHealth.fillAmount = (float)GameStats.maxGameHealth / 10;
     }
 
@@ -21,7 +20,6 @@ public class HealthBarUI : MonoBehaviour
         playerHealth = GameObject.Find("mainChar(Clone)").GetComponent<Health>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (playerHealth == null) instantiateHealthUI();

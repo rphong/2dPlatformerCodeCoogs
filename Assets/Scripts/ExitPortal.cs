@@ -17,17 +17,18 @@ public class ExitPortal : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            
             StartCoroutine(closeAndDissapear());
         }
     }
 
     private IEnumerator closeAndDissapear()
     {
+        //Start closing portal, add a delay, and then remove from scene
         portalAnimator.Play("ExitPortalClose");
         yield return new WaitForSeconds(1f);
         gameObject.SetActive(false);
-        newScene.switchScene("MainLevel");
 
+        //Load into new level
+        newScene.switchScene("MainLevel");
     }
 }

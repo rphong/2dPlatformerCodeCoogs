@@ -33,7 +33,7 @@ public class LayoutGeneration : MonoBehaviour
     public float minX, maxX, minY;
     public LayerMask room;
     public LayerMask spawnPoints;
-    // Start is called before the first frame update
+
     void Start()
     {
         currentDifficulty = GameStats.gameDifficulty;
@@ -143,8 +143,6 @@ public class LayoutGeneration : MonoBehaviour
         {
             goDown();
         }
-
-        
         if (transform.position.y <= minY)//If reached bottom
         {
             Instantiate(exitPortal, transform.position, Quaternion.identity);
@@ -196,19 +194,20 @@ public class LayoutGeneration : MonoBehaviour
 
     private IEnumerator openingPortalAnim()
     {
+        //Create portal & player
         yield return new WaitForSeconds(1f);
         Instantiate(entryPortal, startPos, Quaternion.identity);
-
         yield return new WaitForSeconds(1f);
         Instantiate(player, startPos, Quaternion.identity);
 
+        //Link game objects to local vars
         entryPortalScript = GameObject.Find("EntryPortal(Clone)").GetComponent<EntryPortal>();
         player = GameObject.Find("mainChar(Clone)");
         playerScript = player.GetComponent<frogMovement>();
 
+        //"Push" player out of portal
         playerScript.applyForceX(-1f);
         healthUI.SetActive(true);
-
 
         yield return new WaitForSeconds(2f);
         entryPortalScript.closePortal();
